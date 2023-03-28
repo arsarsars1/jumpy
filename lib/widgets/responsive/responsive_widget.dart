@@ -34,7 +34,7 @@ class ResponsiveWidget extends StatelessWidget {
 
             ResponsiveHelper.setUISize = designUISize;
 
-            /// return the builder method passed onto RespossiveWidget
+            /// return the builder method passed onto ResponsiveWidget
             return builder(context, orientation, ResponsiveHelper.deviceType);
           },
         );

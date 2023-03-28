@@ -27,12 +27,12 @@ class ResponsiveHelper {
 
   /// Gets Device's Aspect Ratio
   static double get aspectRatio {
-    return WidgetsBinding.instance?.window.physicalSize.aspectRatio ?? 1;
+    return WidgetsBinding.instance.window.physicalSize.aspectRatio ?? 1;
   }
 
   /// Gets Device's Pixel Ratio
   static double get pixelRatio {
-    return WidgetsBinding.instance?.window.devicePixelRatio ?? 1;
+    return WidgetsBinding.instance.window.devicePixelRatio ?? 1;
   }
 
   static double getScalablePixel() {

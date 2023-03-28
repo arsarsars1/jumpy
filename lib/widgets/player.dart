@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'dart:ui' as ui show Gradient, lerpDouble;
 import 'dart:ui';
 
@@ -6,9 +5,7 @@ import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flame/parallax.dart';
 import 'package:get_it/get_it.dart';
-import 'package:jumpy/helper/enums.dart';
-import 'package:jumpy/helper/game_controller.dart';
-import 'package:jumpy/widgets/responsive/responsive.dart';
+import 'package:jumpy/export.dart';
 
 class Player extends PositionComponent with CollisionCallbacks, HasGameRef {
   Player(this.parallax)
@@ -139,6 +136,7 @@ class Player extends PositionComponent with CollisionCallbacks, HasGameRef {
       canvas.scale(1 - h * 0.003, 0.3 - h * 0.001);
       canvas.drawCircle(Offset.zero, 10, shadowPaint);
       canvas.restore();
+      GetIt.instance<GameController>().updateHeight(h);
     }
     canvas.drawPath(body, innerPaint);
     canvas.drawPath(body, borderPaint);

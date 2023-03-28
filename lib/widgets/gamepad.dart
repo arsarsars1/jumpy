@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:jumpy/helper/enums.dart';
-import 'package:jumpy/helper/game_controller.dart';
-import 'package:jumpy/widgets/responsive/responsive.dart';
+import 'package:jumpy/export.dart';
 
 class GamePad extends StatelessWidget {
   const GamePad({super.key});

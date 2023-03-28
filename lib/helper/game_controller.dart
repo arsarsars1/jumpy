@@ -5,29 +5,38 @@ import 'enums.dart';
 
 class GameController {
   int score = 0;
+  double height = 0;
   FlameGame? currentGameRef;
   GameAction action = GameAction.idle;
   bool isJumping = false;
   ValueNotifier<GameStatus> gameStatus =
       ValueNotifier<GameStatus>(GameStatus.pause);
   ValueNotifier<int> coinsCollected = ValueNotifier<int>(0);
-  increaseScore() {
+
+  void updateHeight(double value) {
+    height = value;
+    print("JUMP");
+    print(height);
+    print("JUMP Finished");
+  }
+
+  void increaseScore() {
     score += 1;
   }
 
-  resetScore() {
+  void resetScore() {
     score = 0;
   }
 
-  releaseControl() {
+  void releaseControl() {
     action = GameAction.idle;
   }
 
-  setAction(GameAction updatedAction) {
+  void setAction(GameAction updatedAction) {
     action = updatedAction;
   }
 
-  setGameState(GameStatus updatedState) {
+  void setGameState(GameStatus updatedState) {
     gameStatus.value = updatedState;
   }
 }
